@@ -2,9 +2,9 @@ import * as WebBrowser from "expo-web-browser";
 import * as React from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
-import styles from "../constants/Styles";
-import { MonoText } from "../components/StyledText";
-import IntlContext from "../i18n";
+import styles from "constants/Styles";
+import { MonoText } from "components/StyledText";
+import IntlContext from "utils/i18n";
 
 export default function HomeScreen() {
   const intl = React.useContext(IntlContext);

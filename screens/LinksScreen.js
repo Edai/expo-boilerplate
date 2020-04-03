@@ -3,8 +3,11 @@ import * as WebBrowser from "expo-web-browser";
 import * as React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { RectButton, ScrollView } from "react-native-gesture-handler";
+import IntlContext from "utils/i18n";
 
 export default function LinksScreen() {
+  const intl = React.useContext(IntlContext);
+
   return (
     <ScrollView
       style={styles.container}
