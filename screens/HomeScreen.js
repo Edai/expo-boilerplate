@@ -30,7 +30,7 @@ export default function HomeScreen() {
           <DevelopmentModeNotice />
 
           <Text style={styles.getStartedText}>
-            Open up the code for this screen:
+            {intl.getText("GetStarted")}
           </Text>
 
           <View
@@ -40,8 +40,7 @@ export default function HomeScreen() {
           </View>
 
           <Text style={styles.getStartedText}>
-            Change any of the text, save the file, and your app will
-            automatically reload.
+            {intl.getText("ChangeAnyOfText")}
           </Text>
         </View>
 
@@ -72,7 +71,7 @@ export default function HomeScreen() {
 }
 
 HomeScreen.navigationOptions = {
-  header: null
+  header: null,
 };
 
 function DevelopmentModeNotice() {

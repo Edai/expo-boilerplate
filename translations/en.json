@@ -1,3 +1,4 @@
 {
-  "MainTitle": "Title"
+  "GetStarted": "Open up the code for this screen:",
+  "ChangeAnyOfText": "Change any of the text, save the file, and your app will automatically reload."
 }
