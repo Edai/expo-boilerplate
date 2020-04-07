@@ -1390,9 +1390,9 @@
     "@babel/types" "^7.0.0"
 
 "@types/babel__traverse@*", "@types/babel__traverse@^7.0.6":
-  version "7.0.9"
-  resolved "https://registry.yarnpkg.com/@types/babel__traverse/-/babel__traverse-7.0.9.tgz#be82fab304b141c3eee81a4ce3b034d0eba1590a"
-  integrity sha512-jEFQ8L1tuvPjOI8lnpaf73oCJe+aoxL6ygqSy6c8LcW98zaC+4mzWuQIRCEvKeCOu+lbqdXcg4Uqmm1S8AP1tw==
+  version "7.0.10"
+  resolved "https://registry.yarnpkg.com/@types/babel__traverse/-/babel__traverse-7.0.10.tgz#d9a99f017317d9b3d1abc2ced45d3bca68df0daf"
+  integrity sha512-74fNdUGrWsgIB/V9kTO5FGHPWYY6Eqn+3Z7L6Hc4e/BxjYV7puvBqp5HwsVYYfLm6iURYBNCx4Ut37OF9yitCw==
   dependencies:
     "@babel/types" "^7.3.0"
 
@@ -5960,9 +5960,9 @@ react-native-iphone-x-helper@^1.2.1:
   integrity sha512-/VbpIEp8tSNNHIvstuA3Swx610whci1Zpc9mqNkqn14DkMbw+ORviln2u0XyHG1kPvvwTNGZY6QpeFwxYaSdbQ==
 
 react-native-nfc-manager@^2.1.4:
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/react-native-nfc-manager/-/react-native-nfc-manager-2.1.4.tgz#79d062261b8ff0e10b2e215c27e6568677e37dae"
-  integrity sha512-kqoOxtxA3KTNWCGR4KthVycOUl5x9l9ptACobwG4ysHMrG8anjDAEeyENaONQbjDLNfnu3QMRiCb28B6u2cI5A==
+  version "2.1.6"
+  resolved "https://registry.yarnpkg.com/react-native-nfc-manager/-/react-native-nfc-manager-2.1.6.tgz#931dff46d3034180e7bced64c0283ec433279359"
+  integrity sha512-+/8ZeKJ2VJdM6zph9xF4IxtYLg69TGW8CgQSw4SdHmv0u7+KFP05Pyxlcwv1ConxFMBVBkULy8ymM/Z0h1uIdw==
 
 react-native-safe-area-context@0.6.0:
   version "0.6.0"

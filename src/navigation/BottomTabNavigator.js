@@ -20,7 +20,7 @@ export default function BottomTabNavigator({ navigation, route }) {
           title: "Get Started",
           tabBarIcon: ({ focused }) => (
             <TabBarIcon focused={focused} name="md-code-working" />
-          )
+          ),
         }}
       />
       <BottomTab.Screen
@@ -30,7 +30,7 @@ export default function BottomTabNavigator({ navigation, route }) {
           title: "Resources",
           tabBarIcon: ({ focused }) => (
             <TabBarIcon focused={focused} name="md-book" />
-          )
+          ),
         }}
       />
     </BottomTab.Navigator>
