@@ -1,9 +1,9 @@
 import { useLinking } from "@react-navigation/native";
-import { Linking } from "expo";
+import { Alert, Button, Linking, StyleSheet, View } from "react-native";
 
 export default function (containerRef) {
   return useLinking(containerRef, {
-    prefixes: [Linking.makeUrl("/")],
+    prefixes: [Linking.openURL("/")],
     config: {
       Root: {
         path: "root",
