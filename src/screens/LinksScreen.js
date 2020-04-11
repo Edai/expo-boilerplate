@@ -3,10 +3,12 @@ import * as WebBrowser from "expo-web-browser";
 import * as React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { RectButton, ScrollView } from "react-native-gesture-handler";
-import IntlContext from "utils/i18n";
+import { LanguageContext } from "utils/LanguageProvider";
 
 export default function LinksScreen() {
-  const intl = React.useContext(IntlContext);
+  const { translations, setAppLanguage, appLanguage } = React.useContext(
+    LanguageContext
+  );
 
   return (
     <ScrollView
@@ -15,22 +17,15 @@ export default function LinksScreen() {
     >
       <OptionButton
         icon="md-school"
-        label="Read the Expo documentation"
+        label={translations.READ_EXPO_DOC}
         onPress={() => WebBrowser.openBrowserAsync("https://docs.expo.io")}
       />
       <OptionButton
-        icon="md-compass"
-        label="Read the React Navigation documentation"
-        onPress={() =>
-          WebBrowser.openBrowserAsync("https://reactnavigation.org")
-        }
-      />
-
-      <OptionButton
-        icon="ios-chatboxes"
-        label="Ask a question on the forums"
-        onPress={() => WebBrowser.openBrowserAsync("https://forums.expo.io")}
-        isLastOption
+        icon="md-school"
+        label={translations.SET_CHINESE_LANGUAGE}
+        onPress={() => {
+          setAppLanguage(appLanguage == "zh" ? "en" : "zh");
+        }}
       />
     </ScrollView>
   );

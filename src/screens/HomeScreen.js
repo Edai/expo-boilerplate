@@ -4,10 +4,10 @@ import { Image, Text, TouchableOpacity, View } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import styles from "constants/Styles";
 import { MonoText } from "components/StyledText";
-import IntlContext from "utils/i18n";
+import { LanguageContext } from "utils/LanguageProvider";
 
 export default function HomeScreen() {
-  const intl = React.useContext(IntlContext);
+  const { translations } = React.useContext(LanguageContext);
 
   return (
     <View style={styles.container}>
@@ -29,9 +29,7 @@ export default function HomeScreen() {
         <View style={styles.getStartedContainer}>
           <DevelopmentModeNotice />
 
-          <Text style={styles.getStartedText}>
-            {intl.getText("GetStarted")}
-          </Text>
+          <Text style={styles.getStartedText}>{translations.OPEN_UP}</Text>
 
           <View
             style={[styles.codeHighlightContainer, styles.homeScreenFilename]}
@@ -40,23 +38,19 @@ export default function HomeScreen() {
           </View>
 
           <Text style={styles.getStartedText}>
-            {intl.getText("ChangeAnyOfText")}
+            {translations.CHANGE_ANY_TEXT}
           </Text>
         </View>
 
         <View style={styles.helpContainer}>
           <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
-            <Text style={styles.helpLinkText}>
-              Help, it didn’t automatically reload!
-            </Text>
+            <Text style={styles.helpLinkText}>{translations.HELP}</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>
 
       <View style={styles.tabBarInfoContainer}>
-        <Text style={styles.tabBarInfoText}>
-          This is a tab bar. You can edit it in:
-        </Text>
+        <Text style={styles.tabBarInfoText}>{translations.TAB_BAR_INFO}</Text>
 
         <View
           style={[styles.codeHighlightContainer, styles.navigationFilename]}
@@ -75,23 +69,25 @@ HomeScreen.navigationOptions = {
 };
 
 function DevelopmentModeNotice() {
+  const { translations } = React.useContext(LanguageContext);
+
   if (__DEV__) {
     const learnMoreButton = (
       <Text onPress={handleLearnMorePress} style={styles.helpLinkText}>
-        Learn more
+        {translations.LEARN_MORE}
       </Text>
     );
 
     return (
       <Text style={styles.developmentModeText}>
-        Development mode is enabled: your app will be slower but you can use
-        useful development tools. {learnMoreButton}
+        {translations.DEV_MODE}
+        {learnMoreButton}
       </Text>
     );
   } else {
     return (
       <Text style={styles.developmentModeText}>
-        You are not in development mode: your app will run at full speed.
+        {translations.DEV_MODE_NOT}
       </Text>
     );
   }

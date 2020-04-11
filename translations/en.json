@@ -1,4 +1,13 @@
 {
-  "GetStarted": "Open up the code for this screen:",
-  "ChangeAnyOfText": "Change any of the text, save the file, and your app will automatically reload."
+  "OPEN_UP": "Open up the code for this screen:",
+  "CHANGE_ANY_TEXT": "Change any of the text, save the file, and your app will automatically reload.",
+  "READ_EXPO_DOC": "Read the Expo documentation",
+  "HELP": "Help, it didn’t automatically reload!",
+  "SET_CHINESE_LANGUAGE": "Set to Chinese",
+  "TAB_BAR_INFO": "This is a tab bar. You can edit it in:",
+  "LEARN_MORE": "Learn more",
+  "DEV_MODE": "Development mode is enabled: your app will be slower but you can use useful development tools.",
+  "DEV_MODE_NOT": "You are not in development mode: your app will run at full speed.",
+  "GET_STARTED": "Get Started",
+  "RESOURCES": "Resources"
 }
