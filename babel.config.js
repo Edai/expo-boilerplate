@@ -12,13 +12,6 @@ module.exports = function (api) {
           },
         },
       ],
-      [
-        "react-intl",
-        {
-          messagesDir: "./translations",
-          extractSourceLocation: false,
-        },
-      ],
     ],
   };
 };

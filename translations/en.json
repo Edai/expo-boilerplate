@@ -9,5 +9,6 @@
   "DEV_MODE": "Development mode is enabled: your app will be slower but you can use useful development tools.",
   "DEV_MODE_NOT": "You are not in development mode: your app will run at full speed.",
   "GET_STARTED": "Get Started",
-  "RESOURCES": "Resources"
+  "RESOURCES": "Resources",
+  "SETTINGS": "Settings"
 }

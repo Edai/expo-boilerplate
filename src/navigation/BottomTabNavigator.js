@@ -3,7 +3,7 @@ import * as React from "react";
 
 import TabBarIcon from "components/TabBarIcon";
 import HomeScreen from "screens/HomeScreen";
-import LinksScreen from "screens/LinksScreen";
+import SettingsScreen from "screens/SettingsScreen";
 import { LanguageContext } from "utils/LanguageProvider";
 
 const BottomTab = createBottomTabNavigator();
@@ -26,12 +26,12 @@ export default function BottomTabNavigator({ navigation, route }) {
         }}
       />
       <BottomTab.Screen
-        name="Links"
-        component={LinksScreen}
+        name="Settings"
+        component={SettingsScreen}
         options={{
-          title: translations.RESOURCES,
+          title: translations.SETTINGS,
           tabBarIcon: ({ focused }) => (
-            <TabBarIcon focused={focused} name="md-book" />
+            <TabBarIcon focused={focused} name="md-settings" />
           ),
         }}
       />
@@ -46,7 +46,7 @@ function getHeaderTitle(route) {
   switch (routeName) {
     case "Home":
       return "How to get started";
-    case "Links":
-      return "Links to learn more";
+    case "Settings":
+      return "Settings";
   }
 }
