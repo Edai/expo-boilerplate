@@ -16,7 +16,7 @@ export default function LinksScreen() {
       contentContainerStyle={styles.contentContainer}
     >
       <OptionButton
-        icon='md-school'
+        icon='md-settings'
         label={translations.READ_EXPO_DOC}
         onPress={() => {
           WebBrowser.openBrowserAsync("https://docs.expo.io");

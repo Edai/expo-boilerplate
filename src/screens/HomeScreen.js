@@ -5,6 +5,22 @@ import { ScrollView } from "react-native-gesture-handler";
 import styles from "constants/Styles";
 import { MonoText } from "components/StyledText";
 import { LanguageContext } from "utils/LanguageProvider";
+import { ListItem, Avatar } from "react-native-elements";
+
+const list = [
+  {
+    name: "Amy Farha",
+    avatar_url:
+      "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
+    subtitle: "Vice President",
+  },
+  {
+    name: "Chris Jackson",
+    avatar_url:
+      "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg",
+    subtitle: "Vice Chairman",
+  },
+];
 
 export default function HomeScreen() {
   const { translations } = React.useContext(LanguageContext);
@@ -25,21 +41,16 @@ export default function HomeScreen() {
             style={styles.welcomeImage}
           />
         </View>
-
-        <View style={styles.getStartedContainer}>
-          <DevelopmentModeNotice />
-
-          <Text style={styles.getStartedText}>{translations.OPEN_UP}</Text>
-
-          <View
-            style={[styles.codeHighlightContainer, styles.homeScreenFilename]}
-          >
-            <MonoText>screens/HomeScreen.js</MonoText>
-          </View>
-
-          <Text style={styles.getStartedText}>
-            {translations.CHANGE_ANY_TEXT}
-          </Text>
+        <View>
+          {list.map((l, i) => (
+            <ListItem key={i} bottomDivider>
+              <Avatar source={{ uri: l.avatar_url }} />
+              <ListItem.Content>
+                <ListItem.Title>{l.name}</ListItem.Title>
+                <ListItem.Subtitle>{l.subtitle}</ListItem.Subtitle>
+              </ListItem.Content>
+            </ListItem>
+          ))}
         </View>
 
         <View style={styles.helpContainer}>

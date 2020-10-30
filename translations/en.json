@@ -3,7 +3,7 @@
   "CHANGE_ANY_TEXT": "Change any of the text, save the file, and your app will automatically reload.",
   "READ_EXPO_DOC": "Read the Expo documentation",
   "HELP": "Help, it didn’t automatically reload!",
-  "SET_CHINESE_LANGUAGE": "Set to Chinese",
+  "SET_CHINESE_LANGUAGE": "Change the app language",
   "TAB_BAR_INFO": "This is a tab bar. You can edit it in:",
   "LEARN_MORE": "Learn more",
   "DEV_MODE": "Development mode is enabled: your app will be slower but you can use useful development tools.",
