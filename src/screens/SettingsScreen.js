@@ -16,12 +16,14 @@ export default function LinksScreen() {
       contentContainerStyle={styles.contentContainer}
     >
       <OptionButton
-        icon="md-school"
+        icon='md-school'
         label={translations.READ_EXPO_DOC}
-        onPress={() => WebBrowser.openBrowserAsync("https://docs.expo.io")}
+        onPress={() => {
+          WebBrowser.openBrowserAsync("https://docs.expo.io");
+        }}
       />
       <OptionButton
-        icon="md-school"
+        icon='md-school'
         label={translations.SET_CHINESE_LANGUAGE}
         onPress={() => {
           setAppLanguage(appLanguage == "zh" ? "en" : "zh");
@@ -39,7 +41,7 @@ function OptionButton({ icon, label, onPress, isLastOption }) {
     >
       <View style={{ flexDirection: "row" }}>
         <View style={styles.optionIconContainer}>
-          <Ionicons name={icon} size={22} color="rgba(0,0,0,0.35)" />
+          <Ionicons name={icon} size={22} color='rgba(0,0,0,0.35)' />
         </View>
         <View style={styles.optionTextContainer}>
           <Text style={styles.optionText}>{label}</Text>

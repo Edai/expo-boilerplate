@@ -10,28 +10,29 @@ const BottomTab = createBottomTabNavigator();
 const INITIAL_ROUTE_NAME = "Home";
 
 export default function BottomTabNavigator({ navigation, route }) {
-  navigation.setOptions({ headerTitle: getHeaderTitle(route) });
   const { translations } = React.useContext(LanguageContext);
-
+  React.useEffect(() => {
+    navigation.setOptions({ headerTitle: getHeaderTitle(route) });
+  });
   return (
     <BottomTab.Navigator initialRouteName={INITIAL_ROUTE_NAME}>
       <BottomTab.Screen
-        name="Home"
+        name='Home'
         component={HomeScreen}
         options={{
           title: translations.GET_STARTED,
           tabBarIcon: ({ focused }) => (
-            <TabBarIcon focused={focused} name="md-code-working" />
+            <TabBarIcon focused={focused} name='md-code-working' />
           ),
         }}
       />
       <BottomTab.Screen
-        name="Settings"
+        name='Settings'
         component={SettingsScreen}
         options={{
           title: translations.SETTINGS,
           tabBarIcon: ({ focused }) => (
-            <TabBarIcon focused={focused} name="md-settings" />
+            <TabBarIcon focused={focused} name='md-settings' />
           ),
         }}
       />
